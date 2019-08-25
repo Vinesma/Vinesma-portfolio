@@ -1,10 +1,10 @@
 // Select DOM items
-const menuBtn = document.querySelector('.hm');
+// const menuBtn = document.querySelector('.hm');
 
 //set initial state of Menu
 let showMenu = false;
 
-menuBtn.addEventListener('click', toggleMenu);
+// menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu(){
     if(!showMenu){
