@@ -1,0 +1,262 @@
+/* variables */
+:root {
+    --background-color: #a8dfda;
+    --main-color: #fff;
+    --sec-color: #ec5353;
+}
+
+/* reset */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* GENERAL */
+
+body{
+    background-color: var(--background-color);
+}
+
+.section-text{
+    color: var(--sec-color)
+}
+
+/* HEADER */
+
+.main-header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lexend Mega', sans-serif;
+    color: var(--main-color);
+    margin: 0 3rem;
+}
+
+.brand-name{
+    font-size: 1.5rem;
+}
+
+/* HEADER hamburger menu */
+
+.hm{
+    z-index: 3;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.line{
+    width: 40px;
+    height: 7px;
+    display: block;
+    margin: 0 0 5px 0;
+    background: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.hm.active{
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+  
+.hm.active .line:nth-child(2){
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+  
+.hm .line:nth-child(2){
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+  
+  
+.hm.active .line:nth-child(2){
+    opacity: 0;
+}
+  
+.hm.active .line:nth-child(1),
+.hm.active .line:nth-child(3){
+    width: 35px;
+    -webkit-transform-origin: right;
+    -moz-transform-origin: right;
+    -ms-transform-origin: right;
+    -o-transform-origin: right;
+    transform-origin: right;
+}
+  
+.hm.active .line:nth-child(1){
+    -webkit-transform: translateY(15px) rotate(45deg);
+    -ms-transform: translateY(15px) rotate(45deg);
+    -o-transform: translateY(15px) rotate(45deg);
+    transform: translateY(15px) rotate(45deg);
+}
+  
+.hm.active .line:nth-child(3){
+    -webkit-transform: translateY(-15px) rotate(-45deg);
+    -ms-transform: translateY(-15px) rotate(-45deg);
+    -o-transform: translateY(-15px) rotate(-45deg);
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+/* SECTION */
+
+.main-section{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+.div-left{
+    background-color: var(--main-color);
+    width: 40vw;
+    height: 20rem;
+}
+
+.div-left img{
+    max-width: 100%;
+    height: 100%;
+}
+
+.div-left:hover{
+    padding: 0.3rem;
+    background-color: var(--sec-color);
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.div-right{
+    width: 60vw;
+    height: 20rem;
+}
+
+/* SECTION icons */
+
+.icons{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+}
+
+.icons i{
+    padding: 3px;
+}
+
+.icons .fa-github{
+    padding-right: 1rem;
+}
+
+.icons .fa-linkedin{
+    padding-right: 1.2rem;
+}
+
+.icons .fa-twitter{
+    padding-right: 0.9rem;
+}
+
+.icons .fa-deviantart{
+    padding-right: 1.8rem;
+}
+
+
+.icons a{
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--sec-color);
+}
+
+.icons a:hover{
+    border: var(--sec-color) 0.2rem solid;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.icons a:visited{
+    color: var(--sec-color);
+}
+
+/* FOOTER */
+
+.main-footer{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    margin: 0 3rem;
+}
+
+.ft-icons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.9rem;
+}
+
+.ft-icons i{
+    padding: 3px 5px;
+}
+
+.ft-icons a{
+    background-color: var(--main-color);
+    color: var(--sec-color);
+}
+
+.ft-icons a:visited{
+    color: var(--sec-color);
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 768px){
+
+    /* HEADER */
+
+    .main-header{
+        justify-content: center;
+    }
+
+    .brand-name{
+        display: none;
+    }
+
+    /* SECTION */
+
+    .main-section{
+        flex-direction: column;
+    }
+
+    .div-left{
+        width: 100%;
+        height: auto;
+    }
+
+    .icons{
+        padding: 0;
+    }
+
+    .div-right{
+        margin-top: 0.3rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .div-right a{
+        margin: 0.3rem 0;
+    }
+}
