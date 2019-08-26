@@ -19,30 +19,94 @@ const allCoreldraw = document.querySelectorAll  ('.coreldraw');
 
 // Add event listeners to buttons and checkboxes
 selectAllBtn.addEventListener       ('click', eventSelectAll);
-wallpaperctgCheck.addEventListener  ('change', eventChangeDisplay(wallpaperctgCheck));
-iconsLogosCheck.addEventListener    ('change', eventChangeDisplay(iconsLogosCheck));
-vectorCheck.addEventListener        ('change', eventChangeDisplay(vectorCheck));
-pixelartCheck.addEventListener      ('change', eventChangeDisplay(pixelartCheck));
-traditionalCheck.addEventListener   ('change', eventChangeDisplay(traditionalCheck));
-photoshopCheck.addEventListener     ('change', eventChangeDisplay(photoshopCheck));
-coreldrawCheck.addEventListener     ('change', eventChangeDisplay(coreldrawCheck));
+wallpaperctgCheck.addEventListener  ('click', eventChangeDisplay);
+iconsLogosCheck.addEventListener    ('click', eventChangeDisplay);
+vectorCheck.addEventListener        ('click', eventChangeDisplay);
+pixelartCheck.addEventListener      ('click', eventChangeDisplay);
+traditionalCheck.addEventListener   ('click', eventChangeDisplay);
+photoshopCheck.addEventListener     ('click', eventChangeDisplay);
+coreldrawCheck.addEventListener     ('click', eventChangeDisplay);
 
-function eventSelectAll(e){
-    wallpaperctgCheck.checked = true;
-    iconsLogosCheck.checked = true;
-    vectorCheck.checked = true;
-    pixelartCheck.checked = true;
-    traditionalCheck.checked = true;
-    photoshopCheck.checked = true;
-    coreldrawCheck.checked = true;
+function eventSelectAll(){
+    wallpaperctgCheck.checked   = true;
+    iconsLogosCheck.checked     = true;
+    vectorCheck.checked         = true;
+    pixelartCheck.checked       = true;
+    traditionalCheck.checked    = true;
+    photoshopCheck.checked      = true;
+    coreldrawCheck.checked      = true;
+
+    eventChangeDisplay();
 }
 
-function eventChangeDisplay(e){
-    switch (e) {
-        case value:
+function eventChangeDisplay(){
+    if(wallpaperctgCheck.checked === false) {
+        allWallpapers.forEach(item => {
+            item.style.display = 'none';
+        })
+    }else{
+        allWallpapers.forEach(item => {
+            item.style.display = 'block';
+        })
+    }
 
-            break;
-        default:
-            break;
+    if(iconsLogosCheck.checked === false) {
+        allIconsLogos.forEach(item => {
+            item.style.display = 'none';
+        })
+    }else{
+        allIconsLogos.forEach(item => {
+            item.style.display = 'block';
+        })
+    }
+
+    if(vectorCheck.checked === false) {
+        allVectors.forEach(item => {
+            item.style.display = 'none';
+        })
+    }else{
+        allVectors.forEach(item => {
+            item.style.display = 'block';
+        })
+    }
+
+    if(pixelartCheck.checked === false) {
+        allPixelart.forEach(item => {
+            item.style.display = 'none';
+        })
+    }else{
+        allPixelart.forEach(item => {
+            item.style.display = 'block';
+        })
+    }
+
+    if(traditionalCheck.checked === false) {
+        allTraditional.forEach(item => {
+            item.style.display = 'none';
+        })
+    }else{
+        allTraditional.forEach(item => {
+            item.style.display = 'block';
+        })
+    }
+
+    if(photoshopCheck.checked === false) {
+        allPhotoshop.forEach(item => {
+            item.style.display = 'none';
+        })
+    }else{
+        allPhotoshop.forEach(item => {
+            item.style.display = 'block';
+        })
+    }
+
+    if(coreldrawCheck.checked === false) {
+        allCoreldraw.forEach(item => {
+            item.style.display = 'none';
+        })
+    }else{
+        allCoreldraw.forEach(item => {
+            item.style.display = 'block';
+        })
     }
 }
