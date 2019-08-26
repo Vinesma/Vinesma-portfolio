@@ -178,6 +178,11 @@ body{
     margin-left: 0.5rem;
 }
 
+.wrapper #select-all{
+    margin-left: 0;
+    cursor: pointer;
+}
+
 .gallery-category{
     display: flex;
     flex-direction: column;
@@ -218,7 +223,17 @@ body{
     /* HEADER */
 
     .main-header{
+        height: 15vh;
         justify-content: center;
+    }
+
+    .hd-icons{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hd-icons a{
+        margin: 0;
     }
 
     .brand-name{
@@ -248,5 +263,29 @@ body{
 
     .div-right a{
         margin: 0.3rem 0;
+    }
+
+    /* GALLERY */
+
+    .filters{
+        display: block;
+        width: 100%;
+    }
+    
+    .gallery-category{
+        margin-top: 1rem;
+    }
+
+    .wrapper{
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .gallery-section{
+        margin-top: 1rem; 
+    }
+
+    .imgbox img{
+        max-height: 10rem;
     }
 }

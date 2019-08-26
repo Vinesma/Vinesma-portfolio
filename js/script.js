@@ -1,21 +1,48 @@
-// Select DOM items
-// const menuBtn = document.querySelector('.hm');
+// Select filters
+const selectAllBtn = document.querySelector     ('#select-all');
+const wallpaperctgCheck = document.querySelector('#wallpaper-ctg');
+const iconsLogosCheck = document.querySelector  ('#icon-ctg');
+const vectorCheck = document.querySelector      ('#vector-ctg');
+const pixelartCheck = document.querySelector    ('#pixelart-ctg');
+const traditionalCheck = document.querySelector ('#traditional-ctg');
+const photoshopCheck = document.querySelector   ('#photoshop-ctg');
+const coreldrawCheck = document.querySelector   ('#coreldraw-ctg');
 
-//set initial state of Menu
-let showMenu = false;
+// Select filterable content
+const allWallpapers = document.querySelectorAll ('.wallpaper');
+const allIconsLogos = document.querySelectorAll ('.icon-logo');
+const allVectors = document.querySelectorAll    ('.vector');
+const allPixelart = document.querySelectorAll   ('.pixelart');
+const allTraditional = document.querySelectorAll('.traditional');
+const allPhotoshop = document.querySelectorAll  ('.photoshop');
+const allCoreldraw = document.querySelectorAll  ('.coreldraw');
 
-// menuBtn.addEventListener('click', toggleMenu);
+// Add event listeners to buttons and checkboxes
+selectAllBtn.addEventListener       ('click', eventSelectAll);
+wallpaperctgCheck.addEventListener  ('change', eventChangeDisplay(wallpaperctgCheck));
+iconsLogosCheck.addEventListener    ('change', eventChangeDisplay(iconsLogosCheck));
+vectorCheck.addEventListener        ('change', eventChangeDisplay(vectorCheck));
+pixelartCheck.addEventListener      ('change', eventChangeDisplay(pixelartCheck));
+traditionalCheck.addEventListener   ('change', eventChangeDisplay(traditionalCheck));
+photoshopCheck.addEventListener     ('change', eventChangeDisplay(photoshopCheck));
+coreldrawCheck.addEventListener     ('change', eventChangeDisplay(coreldrawCheck));
 
-function toggleMenu(){
-    if(!showMenu){
-        menuBtn.classList.add('active');        
+function eventSelectAll(e){
+    wallpaperctgCheck.checked = true;
+    iconsLogosCheck.checked = true;
+    vectorCheck.checked = true;
+    pixelartCheck.checked = true;
+    traditionalCheck.checked = true;
+    photoshopCheck.checked = true;
+    coreldrawCheck.checked = true;
+}
 
-        //set menu state
-        showMenu = true;
-    }else{
-        menuBtn.classList.remove('active');
+function eventChangeDisplay(e){
+    switch (e) {
+        case value:
 
-        //set menu state
-        showMenu = false;
+            break;
+        default:
+            break;
     }
 }
