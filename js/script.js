@@ -19,13 +19,13 @@ const allCoreldraw = document.querySelectorAll  ('.coreldraw');
 
 // Add event listeners to buttons and checkboxes
 selectAllBtn.addEventListener       ('click', eventSelectAll);
-wallpaperctgCheck.addEventListener  ('click', eventChangeDisplay);
-iconsLogosCheck.addEventListener    ('click', eventChangeDisplay);
-vectorCheck.addEventListener        ('click', eventChangeDisplay);
-pixelartCheck.addEventListener      ('click', eventChangeDisplay);
-traditionalCheck.addEventListener   ('click', eventChangeDisplay);
-photoshopCheck.addEventListener     ('click', eventChangeDisplay);
-coreldrawCheck.addEventListener     ('click', eventChangeDisplay);
+wallpaperctgCheck.addEventListener  ('click', changeDisplayAll);
+iconsLogosCheck.addEventListener    ('click', changeDisplayAll);
+vectorCheck.addEventListener        ('click', changeDisplayAll);
+pixelartCheck.addEventListener      ('click', changeDisplayAll);
+traditionalCheck.addEventListener   ('click', changeDisplayAll);
+photoshopCheck.addEventListener     ('click', changeDisplayAll);
+coreldrawCheck.addEventListener     ('click', changeDisplayAll);
 
 function eventSelectAll(){
     wallpaperctgCheck.checked   = true;
@@ -36,76 +36,26 @@ function eventSelectAll(){
     photoshopCheck.checked      = true;
     coreldrawCheck.checked      = true;
 
-    eventChangeDisplay();
+    changeDisplayAll();
 }
 
-function eventChangeDisplay(){
-    if(wallpaperctgCheck.checked === false) {
-        allWallpapers.forEach(item => {
-            item.style.display = 'none';
-        })
-    }else{
-        allWallpapers.forEach(item => {
-            item.style.display = 'block';
-        })
-    }
+function changeDisplayAll(){
+    changeDisplay(wallpaperctgCheck, allWallpapers);
+    changeDisplay(iconsLogosCheck, allIconsLogos);
+    changeDisplay(vectorCheck, allVectors);
+    changeDisplay(pixelartCheck, allPixelart);
+    changeDisplay(traditionalCheck, allTraditional);
+    changeDisplay(photoshopCheck, allPhotoshop);
+    changeDisplay(coreldrawCheck, allCoreldraw);
+}
 
-    if(iconsLogosCheck.checked === false) {
-        allIconsLogos.forEach(item => {
+function changeDisplay(checkbox, filterItems){
+    if (checkbox.checked === false){
+        filterItems.forEach(item => {
             item.style.display = 'none';
-        })
+        });
     }else{
-        allIconsLogos.forEach(item => {
-            item.style.display = 'block';
-        })
-    }
-
-    if(vectorCheck.checked === false) {
-        allVectors.forEach(item => {
-            item.style.display = 'none';
-        })
-    }else{
-        allVectors.forEach(item => {
-            item.style.display = 'block';
-        })
-    }
-
-    if(pixelartCheck.checked === false) {
-        allPixelart.forEach(item => {
-            item.style.display = 'none';
-        })
-    }else{
-        allPixelart.forEach(item => {
-            item.style.display = 'block';
-        })
-    }
-
-    if(traditionalCheck.checked === false) {
-        allTraditional.forEach(item => {
-            item.style.display = 'none';
-        })
-    }else{
-        allTraditional.forEach(item => {
-            item.style.display = 'block';
-        })
-    }
-
-    if(photoshopCheck.checked === false) {
-        allPhotoshop.forEach(item => {
-            item.style.display = 'none';
-        })
-    }else{
-        allPhotoshop.forEach(item => {
-            item.style.display = 'block';
-        })
-    }
-
-    if(coreldrawCheck.checked === false) {
-        allCoreldraw.forEach(item => {
-            item.style.display = 'none';
-        })
-    }else{
-        allCoreldraw.forEach(item => {
+        filterItems.forEach(item =>{
             item.style.display = 'block';
         })
     }
