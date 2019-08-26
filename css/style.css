@@ -1,6 +1,6 @@
 /* variables */
 :root {
-    --background-color: #a8dfda;
+    --background-color: #8cdad4;
     --main-color: #fff;
     --sec-color: #ec5353;
 }
@@ -20,11 +20,20 @@ body{
 }
 
 .section-text{
-    color: var(--sec-color)
+    color: var(--sec-color);
+    font-family: 'Lexend Deca', sans-serif;
 }
 
-.hover-anim:hover{
-    border: var(--sec-color) 0.2rem solid;
+.hover-anim:hover{ 
+    border-left: var(--sec-color) 0.5rem solid;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.hover-anim-2:hover{ 
+    border-bottom: var(--sec-color) 0.3rem solid;
+    border-left: var(--sec-color) 0.2rem solid;
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -94,14 +103,6 @@ body{
     height: 100%;
 }
 
-.div-left:hover{
-    padding: 0.3rem;
-    background-color: var(--sec-color);
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-}
-
 .div-right{
     width: 60vw;
     height: 20rem;
@@ -151,6 +152,65 @@ body{
 
 .icons a:visited{
     color: var(--sec-color);
+}
+
+/* GALLERY */
+
+.gallery-section{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3rem 3rem 0 3rem;
+}
+
+.filters{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper{
+    background-color: var(--main-color);
+    padding: 5px;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.filters .section-text{
+    margin-left: 0.5rem;
+}
+
+.gallery-category{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.displaybox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.imgbox img{
+    display: block;
+    max-height: 12rem;
+    width: auto;
+    height: auto;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    background: var(--main-color);
+}
+
+.imgbox img:hover{
+    background: var(--sec-color);
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 /* MEDIA QUERIES */
