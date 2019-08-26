@@ -57,6 +57,6 @@ function changeDisplay(checkbox, filterItems){
     }else{
         filterItems.forEach(item =>{
             item.style.display = 'block';
-        })
+        });
     }
 }
