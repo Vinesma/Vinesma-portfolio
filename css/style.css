@@ -233,8 +233,9 @@ body{
     /* HEADER */
 
     .main-header{
-        height: 15vh;
+        height: 20vh;
         justify-content: center;
+        flex-direction: column;
     }
 
     .hd-icons{
@@ -247,7 +248,10 @@ body{
     }
 
     .brand-name{
-        display: none;
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
     }
 
     /* SECTION */
