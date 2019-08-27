@@ -36,7 +36,7 @@ body{
 }
 
 .hover-anim-2:hover{
-    box-shadow: 0.1rem 0.2rem var(--sec-color);
+    box-shadow: 0.2rem 0.3rem var(--sec-color);
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -207,6 +207,7 @@ body{
 }
 
 .imgbox img{
+    cursor: zoom-in;
     display: block;
     max-height: 12rem;
     width: auto;
