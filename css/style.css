@@ -24,6 +24,10 @@ body{
     font-family: 'Lexend Deca', sans-serif;
 }
 
+.clickable{
+    cursor: pointer;
+}
+
 .hover-anim:hover{ 
     border-left: var(--sec-color) 0.5rem solid;
     -webkit-transition: all 0.2s ease;
@@ -171,7 +175,6 @@ body{
 .wrapper{
     background-color: var(--main-color);
     padding: 5px;
-    margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
@@ -182,7 +185,10 @@ body{
 
 .wrapper #select-all{
     margin-left: 0;
-    cursor: pointer;
+}
+
+.wrapper #select-none{
+    margin-left: 0;
 }
 
 .gallery-category{
