@@ -162,7 +162,7 @@ body{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin: 3rem 3rem 0 3rem;
+    margin: 3rem 3rem 4rem 3rem;
 }
 
 .filters{
@@ -206,6 +206,12 @@ body{
     margin-top: 2rem;
 }
 
+.imgbox{
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
 .imgbox img{
     cursor: zoom-in;
     display: block;
@@ -213,9 +219,6 @@ body{
     width: auto;
     height: auto;
     padding: 0.3rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
     background: var(--main-color);
 }
 
