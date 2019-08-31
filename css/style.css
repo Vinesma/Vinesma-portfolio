@@ -196,6 +196,10 @@ body{
     width: 100%;
 }
 
+.gallery-category .wrapper{
+    border-left: var(--sec-color) 0.5rem solid;
+}
+
 .displaybox{
     display: flex;
     flex-wrap: wrap;

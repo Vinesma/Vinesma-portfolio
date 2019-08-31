@@ -22,12 +22,12 @@ let bannerDisplay = bannerBtn.lastElementChild;
 collapseAllBtn.addEventListener('click', collapseAll);
 expandAllBtn.addEventListener('click', expandAll);
 
-wallpaperBtn.addEventListener('click', function(){ changeDisplay(wallpaperDisplay); });
-vectorBtn.addEventListener('click', function(){ changeDisplay(vectorDisplay); });
-pixelArtBtn.addEventListener('click', function(){ changeDisplay(pixelArtDisplay); });
-traditionalBtn.addEventListener('click', function(){ changeDisplay(traditionalDisplay); });
-iconBtn.addEventListener('click', function(){ changeDisplay(iconDisplay); });
-bannerBtn.addEventListener('click', function(){ changeDisplay(bannerDisplay); });
+wallpaperBtn.firstElementChild.addEventListener('click', function(){ changeDisplay(wallpaperDisplay); });
+vectorBtn.firstElementChild.addEventListener('click', function(){ changeDisplay(vectorDisplay); });
+pixelArtBtn.firstElementChild.addEventListener('click', function(){ changeDisplay(pixelArtDisplay); });
+traditionalBtn.firstElementChild.addEventListener('click', function(){ changeDisplay(traditionalDisplay); });
+iconBtn.firstElementChild.addEventListener('click', function(){ changeDisplay(iconDisplay); });
+bannerBtn.firstElementChild.addEventListener('click', function(){ changeDisplay(bannerDisplay); });
 
 // FUNCTIONS
 
