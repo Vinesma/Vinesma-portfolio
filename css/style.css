@@ -176,23 +176,15 @@ body{
     width: 100%;
 }
 
+.filters a{
+    text-decoration: none;
+}
+
 .wrapper{
     background-color: var(--main-color);
     padding: 5px;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-}
-
-.filters .section-text{
-    margin-left: 0.5rem;
-}
-
-.wrapper #select-all{
-    margin-left: 0;
-}
-
-.wrapper #select-none{
-    margin-left: 0;
 }
 
 /* GALLERY categories */

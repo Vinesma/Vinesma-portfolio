@@ -19,39 +19,17 @@
     </header>
     <section class="gallery-section">
         <div class="filters">
-            <div class="wrapper hover-anim-2">
-                <span class="section-text clickable" id="select-all">Select All</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <span class="section-text clickable" id="select-none">Select None</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="wallpaper-ctg" checked><span id="wp-click" class="section-text clickable">Wallpapers</span>
-            </div>            
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="vector-ctg" checked><span id="vc-click" class="section-text clickable">Vectors</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="pixelart-ctg" checked><span id="pa-click" class="section-text clickable">Pixel Art</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="traditional-ctg" checked><span id="tr-click" class="section-text clickable">Traditional</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="icon-ctg" checked><span id="ic-click" class="section-text clickable">Icons & Logos</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="banner-ctg" checked><span id="bn-click" class="section-text clickable">Banners</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="photoshop-ctg" checked><span id="ph-click" class="section-text clickable">Photoshop</span>
-            </div>
-            <div class="wrapper hover-anim-2">
-                <input type="checkbox" id="coreldraw-ctg" checked><span id="co-click" class="section-text clickable">Coreldraw</span>
-            </div>
+            <div class="wrapper hover-anim-2 clickable" id="collapse-all"><span class="section-text" >Collapse All</span></div>
+            <div class="wrapper hover-anim-2 clickable" id="expand-all"><span class="section-text">Expand All</span></div>
+            <a href="#wallpapers"><div class="wrapper hover-anim-2"><span id="wp-click" class="section-text">Wallpapers</span></div></a>
+            <a href="#vectors"><div class="wrapper hover-anim-2"><span id="vc-click" class="section-text">Vectors</span></div></a>
+            <a href="#pixelart"><div class="wrapper hover-anim-2"><span id="pa-click" class="section-text">Pixel Art</span></div></a>
+            <a href="#traditional"><div class="wrapper hover-anim-2"><span id="tr-click" class="section-text">Traditional</span></div></a>
+            <a href="#icons"><div class="wrapper hover-anim-2"><span id="ic-click" class="section-text">Icons & Logos</span></div></a>
+            <a href="#banners"><div class="wrapper hover-anim-2"><span id="bn-click" class="section-text">Banners</span></div></a>
         </div>
         <div class="gallery-category wallpaper">            
-            <div class="wrapper"><span class="section-text">Wallpapers</span></div>
+            <div class="wrapper clickable" id="wallpapers"><span class="section-text">Wallpapers</span></div>
             <div class="displaybox">
                 <div class="imgbox photoshop"><a href="https://i.imgur.com/kE6Wq1t.png"><img src="https://i.imgur.com/kE6Wq1tm.png" alt=""></a></div>
                 <div class="imgbox vector coreldraw photoshop"><a href="https://i.imgur.com/70oKVAC.png"><img src="https://i.imgur.com/70oKVACm.png" alt=""></a></div>
@@ -74,7 +52,7 @@
             </div>
         </div>
         <div class="gallery-category vector">            
-            <div class="wrapper"><span class="section-text">Vectors</span></div>
+            <div class="wrapper clickable" id="vectors"><span class="section-text">Vectors</span></div>
             <div class="displaybox">
                 <div class="imgbox coreldraw"><a href="https://i.imgur.com/CrUpeoX.png"><img src="https://i.imgur.com/CrUpeoXm.png" alt=""></a></div>
                 <div class="imgbox coreldraw"><a href="https://i.imgur.com/tDC6geb.png"><img src="https://i.imgur.com/tDC6gebm.png" alt=""></a></div>
@@ -86,7 +64,7 @@
             </div>
         </div>
         <div class="gallery-category pixelart">            
-            <div class="wrapper"><span class="section-text">Pixel Art</span></div>
+            <div class="wrapper clickable" id="pixelart"><span class="section-text">Pixel Art</span></div>
             <div class="displaybox">
                 <div class="imgbox photoshop"><a href="https://i.imgur.com/AACJIgc.png"><img src="https://i.imgur.com/AACJIgcm.png" alt=""></a></div>
                 <div class="imgbox photoshop"><a href="https://i.imgur.com/nbAsuJY.png"><img src="https://i.imgur.com/nbAsuJYm.png" alt=""></a></div>
@@ -95,7 +73,7 @@
             </div>
         </div>
         <div class="gallery-category traditional">
-            <div class="wrapper"><span class="section-text">Traditional</span></div>
+            <div class="wrapper clickable" id="traditional"><span class="section-text">Traditional</span></div>
             <div class="displaybox">
                 <div class="imgbox"><a href="https://i.imgur.com/TKQfort.png"><img src="https://i.imgur.com/TKQfortm.png" alt=""></a></div>
                 <div class="imgbox"><a href="https://i.imgur.com/HqK5gtV.png"><img src="https://i.imgur.com/HqK5gtVm.png" alt=""></a></div>
@@ -104,15 +82,15 @@
                 <div class="imgbox photoshop"><a href="https://i.imgur.com/eevQax8.png"><img src="https://i.imgur.com/eevQax8m.png" alt=""></a></div>
             </div>
         </div>
-        <div class="gallery-category icon-logo">            
-            <div class="wrapper"><span class="section-text">Icons & Logos</span></div>
+        <div class="gallery-category icon-logo">
+            <div class="wrapper clickable" id="icons"><span class="section-text">Icons & Logos</span></div>
             <div class="displaybox">
                 <div class="imgbox photoshop"><a href="https://i.imgur.com/d3iBLP6.png"><img src="https://i.imgur.com/d3iBLP6m.png" alt=""></a></div>
                 <div class="imgbox coreldraw"><a href="https://i.imgur.com/9nUijXv.png"><img src="https://i.imgur.com/9nUijXvm.png" alt=""></a></div>
             </div>
         </div>
         <div class="gallery-category banner">            
-            <div class="wrapper"><span class="section-text">Banners</span></div>
+            <div class="wrapper clickable" id="banners"><span class="section-text">Banners</span></div>
             <div class="displaybox">
                 <div class="imgbox photoshop"><a href="https://i.imgur.com/JuyEtxV.png"><img src="https://i.imgur.com/JuyEtxVm.png" alt=""></a></div>
             </div>
