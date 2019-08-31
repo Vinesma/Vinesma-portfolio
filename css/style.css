@@ -169,11 +169,15 @@ body{
     margin: 3rem 3rem 4rem 3rem;
 }
 
-.filters{
+.navigation{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+}
+
+.navigation a{
+    text-decoration: none;
 }
 
 .wrapper{
@@ -181,18 +185,6 @@ body{
     padding: 5px;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-}
-
-.filters .section-text{
-    margin-left: 0.5rem;
-}
-
-.wrapper #select-all{
-    margin-left: 0;
-}
-
-.wrapper #select-none{
-    margin-left: 0;
 }
 
 /* GALLERY categories */
@@ -292,7 +284,7 @@ body{
 
     /* GALLERY */
 
-    .filters{
+    .navigation{
         display: block;
         width: 100%;
     }
