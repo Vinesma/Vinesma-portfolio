@@ -169,14 +169,14 @@ body{
     margin: 3rem 3rem 4rem 3rem;
 }
 
-.filters{
+.navigation{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
 
-.filters a{
+.navigation a{
     text-decoration: none;
 }
 
@@ -284,7 +284,7 @@ body{
 
     /* GALLERY */
 
-    .filters{
+    .navigation{
         display: block;
         width: 100%;
     }
