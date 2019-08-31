@@ -176,6 +176,14 @@ body{
     width: 100%;
 }
 
+.navigation #collapse-all{
+    font-weight: bold;
+}
+
+.navigation #expand-all{
+    font-weight: bold;
+}
+
 .navigation a{
     text-decoration: none;
 }
