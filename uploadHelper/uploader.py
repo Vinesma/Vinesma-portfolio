@@ -101,5 +101,3 @@ for filename in os.listdir('./uploadHelper/'):
 newHtml = open('./gallery.html', 'w')
 newHtml.write(soup.prettify())
 newHtml.close()
-
-input('Press ENTER to exit...')
