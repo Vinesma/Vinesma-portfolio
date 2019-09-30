@@ -9,18 +9,18 @@ link = "https://i.imgur.com/"
 ## Thumbnail Size 't' = Small 'm' = Medium 'l' = 'Large'
 thumbSize = 'm'
 ## Get clientId
-if not os.path.isfile('./uploadHelper/clientID.txt'):
+if not os.path.isfile(os.path.join('.', 'uploadHelper', 'clientID.txt')):
     print('clientID.txt not found! Make sure the file is in the dir and has a valid clientID from imgur.')
-idFile = open('./uploadHelper/clientID.txt', 'r')
+idFile = open(os.path.join('.', 'uploadHelper', 'clientID.txt'), 'r')
 clientId = idFile.read()
 idFile.close()
 
 # Make a backup of the gallery file
-shutil.copy('./gallery.html', './gallery(backup).html')
+shutil.copy(os.path.join('.', 'gallery.html'), os.path.join('.', 'gallery(backup).html'))
 print('Backup of gallery created.')
 
 # Parses html into the 'soup' variable
-with open("./gallery.html") as fp:
+with open(os.path.join('.', 'gallery.html')) as fp:
     soup = BeautifulSoup(fp, features="html.parser")
     fp.close()
 
@@ -34,14 +34,15 @@ displayBoxBN = soup.body.section.contents[13].contents[3] # Selecting the displa
 # print(displayBoxWP)
 
 # Loop over images in the working dir and uploads everything to imgur
-for filename in os.listdir('./uploadHelper/'):
+directory = os.path('.', 'uploadHelper')
+for filename in os.listdir(directory):
     mo = namePattern.search(filename)
 
     if mo is None: #skips files that don't match regex
         continue
 
     # Open image file and encode to base64
-    with open('./uploadHelper/{}'.format(filename), 'rb') as f:
+    with open(os.path.join(directory, filename), 'rb') as f:
         data = f.read()
         encodedData = base64.b64encode(data)
         f.close()
@@ -76,28 +77,28 @@ for filename in os.listdir('./uploadHelper/'):
         # Chooses where to append the new file to the gallery, then deletes the file
         if category == 'wallpaper':
             displayBoxWP.append(new_div)
-            os.unlink('./uploadHelper/{}'.format(filename))
+            os.unlink(os.path.join(directory, filename))
         elif category == 'vector':
             displayBoxVC.append(new_div)
-            os.unlink('./uploadHelper/{}'.format(filename))
+            os.unlink(os.path.join(directory, filename))
         elif category == 'pixelart':
             displayBoxPA.append(new_div)
-            os.unlink('./uploadHelper/{}'.format(filename))
+            os.unlink(os.path.join(directory, filename))
         elif category == 'traditional':
             displayBoxTR.append(new_div)
-            os.unlink('./uploadHelper/{}'.format(filename))
+            os.unlink(os.path.join(directory, filename))
         elif category == 'icon':
             displayBoxIC.append(new_div)
-            os.unlink('./uploadHelper/{}'.format(filename))
+            os.unlink(os.path.join(directory, filename))
         elif category == 'banner':
             displayBoxBN.append(new_div)
-            os.unlink('./uploadHelper/{}'.format(filename))
+            os.unlink(os.path.join(directory, filename))
         else:
             print('Could not identify category of {}'.format(filename))
     else:
         print('{} failed to upload!'.format(filename))
 
 # Write the new HTML to file
-newHtml = open('./gallery.html', 'w')
+newHtml = open(os.path.join('.', 'gallery.html'), 'w')
 newHtml.write(soup.prettify())
 newHtml.close()
